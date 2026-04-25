@@ -1,0 +1,26 @@
+[package]
+name = "remodel-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["Hebert <hebertcisco@outlook.com>"]
+license = "GPL-3.0-or-later"
+description = "Database modeling engine: conceptual (ER) to logical (relational) transformation and SQL DDL generation. A Rust reimplementation of the core engine of brModelo."
+homepage = "https://github.com/hebert/Remodel"
+repository = "https://github.com/hebert/Remodel"
+documentation = "https://docs.rs/remodel-core"
+readme = "README.md"
+keywords = ["database", "modeling", "er-diagram", "sql", "ddl"]
+categories = ["database", "data-structures", "parser-implementations"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
+petgraph = { version = "0.6", features = ["serde-1"] }
+indexmap = { version = "2", features = ["serde"] }
+
+[dev-dependencies]
+pretty_assertions = "1"
+insta = { version = "1", features = ["yaml"] }
