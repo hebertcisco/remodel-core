@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - "remodel-core-v*"
-
+      - v*
 jobs:
   publish:
     runs-on: ubuntu-latest
